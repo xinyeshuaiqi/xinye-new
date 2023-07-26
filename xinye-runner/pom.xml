@@ -9,7 +9,6 @@
     </parent>
 
     <artifactId>xinye-runner</artifactId>
-    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
