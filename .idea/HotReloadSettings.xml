@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="org.jetbrains.sdk.hotreload.remote.HotReloadSettingsState">
+    <option name="kwsFilterText" value="" />
+    <option name="selectedKcsInstance" value="cloud-1736730-920507-791991-434-deploy-579d75f5f8-x68cd 67529 jacococli.jar merge 43297_master.exec now.exec 43297_master.exec --destfile merge.exec usergrowth-oreo-pay-center-callback-consumer STAGING " />
+    <option name="selectedKcsLaneId" value="STAGING.c2c_auto_test" />
+    <option name="selectedKcsStage" value="STAGING" />
+    <option name="selectedKwsName" value="usergrowth-oreo-pay-center-callback-consumer" />
+    <option name="hostSearchField" value="" />
+    <option name="selectedHostname" value="zt-bjzey-rs-abtest12.idchb1az3.hb1.kwaidc.com" />
+    <option name="processSearchField" value="" />
+    <option name="chosenHostProcess" value="zt-bjzey-rs-abtest12.idchb1az3.hb1.kwaidc.com 125585 /home/web_server/files/huwenbin03/kuaishou-abtest-api-boot/ks-abtest2-exp-api.jar null null -XX:+IgnoreUnrecognizedVMOptions -XX:+AggressiveOpts -XX:+UseStringDeduplication -Xss2048k -Xmx2G -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+ExitOnOutOfMemoryError -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8 -Djava.library.path=/usr/local/lib -DLOG_PATH=/data/logs/huwenbin03/api-boot/ -Dserver.port=3431" />
+  </component>
+</project>
