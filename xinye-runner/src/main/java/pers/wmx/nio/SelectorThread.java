@@ -123,8 +123,7 @@ public class SelectorThread
         try {
             SocketChannel client = server.accept();
             client.configureBlocking(false);
-            // selectorThreadGroup(client);
-
+            selectorThreadGroup.nextSelector(client);
         } catch (IOException e) {
             e.printStackTrace();
         }
