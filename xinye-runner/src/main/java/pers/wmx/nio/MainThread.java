@@ -8,7 +8,7 @@ public class MainThread {
 
     public static void main(String[] args) {
         System.out.println(Thread.currentThread().getName() + " enter ...");
-        SelectorThreadGroup selectorThreadGroup = new SelectorThreadGroup(4);
+        SelectorThreadGroup selectorThreadGroup = new SelectorThreadGroup(5);
         selectorThreadGroup.bind(8886);
     }
 

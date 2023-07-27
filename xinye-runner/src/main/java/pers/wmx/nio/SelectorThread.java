@@ -98,10 +98,10 @@ public class SelectorThread
                 int num = client.read(buffer);
                 if (num > 0){
                     buffer.flip();  //将读到的内容翻转，然后直接写出
+                    System.out.println(
+                            Thread.currentThread().getName() + " read buffer");
                     while(buffer.hasRemaining()){
-                        // client.write(buffer);
-                        System.out.println(
-                                Thread.currentThread().getName() + " read buffer: " + (char)buffer.get());
+                        client.write(buffer);
                     }
                     buffer.clear();
                 } else if (num == 0){

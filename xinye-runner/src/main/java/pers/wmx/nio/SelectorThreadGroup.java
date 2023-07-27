@@ -44,7 +44,7 @@ public class SelectorThreadGroup {
     }
 
     private SelectorThread next() {
-        int index = counter.incrementAndGet() % selectorThreads.length;  //轮询就会很尴尬，倾斜
+        int index = counter.getAndIncrement() % selectorThreads.length;  //轮询就会很尴尬，倾斜
         return selectorThreads[index];
     }
 }
