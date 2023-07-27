@@ -70,7 +70,7 @@ public class SelectorThread
 
                         // 注册接受连接事件
                         server.register(selector,SelectionKey.OP_ACCEPT);
-                        System.out.println(Thread.currentThread().getName()+" register accept");
+                        System.out.println(Thread.currentThread().getName() + " register accept");
                     } else if(channel instanceof SocketChannel){
                         SocketChannel client = (SocketChannel) channel;
                         ByteBuffer buffer = ByteBuffer.allocateDirect(4096);
@@ -99,7 +99,9 @@ public class SelectorThread
                 if (num > 0){
                     buffer.flip();  //将读到的内容翻转，然后直接写出
                     while(buffer.hasRemaining()){
-                        client.write(buffer);
+                        // client.write(buffer);
+                        System.out.println(
+                                Thread.currentThread().getName() + " read buffer: " + (char)buffer.get());
                     }
                     buffer.clear();
                 } else if (num == 0){

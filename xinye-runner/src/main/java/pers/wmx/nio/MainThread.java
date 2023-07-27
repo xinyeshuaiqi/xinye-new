@@ -7,7 +7,8 @@ package pers.wmx.nio;
 public class MainThread {
 
     public static void main(String[] args) {
-        SelectorThreadGroup selectorThreadGroup = new SelectorThreadGroup(3);
+        System.out.println(Thread.currentThread().getName() + " enter ...");
+        SelectorThreadGroup selectorThreadGroup = new SelectorThreadGroup(4);
         selectorThreadGroup.bind(8886);
     }
 
