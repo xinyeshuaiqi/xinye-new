@@ -49,11 +49,13 @@ public class SelectorThreadGroup {
                 selectorThread.queue.put(channel);
                 // 打断阻塞
                 selectorThread.selector.wakeup();
+            } else {
+                // 交给woker线程处理读写
+                SelectorThread selectorThread = nextWorker();
+                selectorThread.queue.put(channel);
+                // 打断阻塞
+                selectorThread.selector.wakeup();
             }
-            SelectorThread selectorThread = next();
-            selectorThread.queue.add(channel);
-            // 打断阻塞
-            selectorThread.selector.wakeup();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -67,6 +69,6 @@ public class SelectorThreadGroup {
     // 从worker取
     private SelectorThread nextWorker() {
         int index = counter.getAndIncrement() % worker.selectorThreads.length;
-        return selectorThreads[index];
+        return worker.selectorThreads[index];
     }
 }
