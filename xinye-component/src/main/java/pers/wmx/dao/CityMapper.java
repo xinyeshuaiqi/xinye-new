@@ -1,4 +1,4 @@
-package pers.wmx.service;
+package pers.wmx.dao;
 
 import java.util.List;
 

@@ -7,10 +7,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.alibaba.fastjson.JSON;
-
 import pers.wmx.model.City;
-import pers.wmx.service.CityMapper;
+import pers.wmx.dao.CityMapper;
 import pers.wmx.service.CityService;
 
 
