@@ -9,13 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="xinye-runner" />
         <module name="xinye-api" />
-      </profile>
-      <profile name="Annotation profile for xinye-new" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="xinye-component" />
         <module name="xinye-sdk" />
+        <module name="xinye-component" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

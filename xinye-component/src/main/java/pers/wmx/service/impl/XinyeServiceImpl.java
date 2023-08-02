@@ -1,9 +1,11 @@
-package pers.wmx.service;
+package pers.wmx.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
+
+import pers.wmx.service.XinyeService;
 
 /**
  * @author wangmingxin03
