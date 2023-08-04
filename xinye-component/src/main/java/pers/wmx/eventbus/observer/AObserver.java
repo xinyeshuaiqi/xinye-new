@@ -2,7 +2,7 @@ package pers.wmx.eventbus.observer;
 
 
 import lombok.extern.slf4j.Slf4j;
-import pers.wmx.springbootfreemarkerdemo.eventbus.Subscribe;
+import pers.wmx.eventbus.Subscribe;
 
 /**
  * @author wangmingxin03

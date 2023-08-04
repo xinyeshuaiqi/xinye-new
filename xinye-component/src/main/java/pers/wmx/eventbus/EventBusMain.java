@@ -2,10 +2,10 @@ package pers.wmx.eventbus;
 
 import java.util.concurrent.Executors;
 
-import pers.wmx.springbootfreemarkerdemo.eventbus.event.OrderPlaceEvent;
-import pers.wmx.springbootfreemarkerdemo.eventbus.observer.AObserver;
-import pers.wmx.springbootfreemarkerdemo.eventbus.observer.BObserver;
-import pers.wmx.springbootfreemarkerdemo.eventbus.observer.CObserver;
+import pers.wmx.eventbus.event.OrderPlaceEvent;
+import pers.wmx.eventbus.observer.AObserver;
+import pers.wmx.eventbus.observer.BObserver;
+import pers.wmx.eventbus.observer.CObserver;
 
 /**
  * @author wangmingxin03
