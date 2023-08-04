@@ -1,4 +1,4 @@
-package pers.wmx.springbootfreemarkerdemo.zk;
+package pers.wmx.zk;
 
 import java.util.concurrent.CountDownLatch;
 
