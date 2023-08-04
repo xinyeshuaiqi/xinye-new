@@ -23,4 +23,16 @@ public class XinyeController {
         Map<String, Object> result = xinyeService.get();
         return result;
     }
+
+    @RequestMapping("/setRedis")
+    public Map<String, Object> setRedis() {
+        Map<String, Object> result = xinyeService.setRedis();
+        return result;
+    }
+
+    @RequestMapping("/getRedis")
+    public Map<String, Object> getRedis() {
+        Map<String, Object> result = xinyeService.getRedis();
+        return result;
+    }
 }

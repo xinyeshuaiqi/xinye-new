@@ -8,4 +8,8 @@ import java.util.Map;
  */
 public interface XinyeService {
     Map<String, Object> get();
+
+    Map<String, Object> setRedis();
+
+    Map<String, Object> getRedis();
 }
