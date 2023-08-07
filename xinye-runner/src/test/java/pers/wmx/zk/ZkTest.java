@@ -35,7 +35,7 @@ public class ZkTest {
     public void testQuery() {
         try {
             Stat stat = new Stat();
-            byte[] bytes = zkClient.getData("/hello", false, stat);
+            byte[] bytes = zkClient.getData("/hello/hello1", false, stat);
         } catch (Exception e) {
         }
     }

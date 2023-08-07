@@ -7,11 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author wangmingxin03
  * Created on 2021-12-15
  */
-@RunWith(SpringRunner.class)
+@Slf4j
 @SpringBootTest
 public class KafkaTest {
     @Autowired
@@ -21,7 +23,7 @@ public class KafkaTest {
     public void testSend() throws Exception {
         OrderCreateMsg msg = new OrderCreateMsg(2, 234);
         SendResult sendResult = kafkaProducerHelper.send(msg);
-        // log.info("sendResult:{}", sendResult);
+        log.info("sendResult:{}", sendResult);
     }
 
 }
