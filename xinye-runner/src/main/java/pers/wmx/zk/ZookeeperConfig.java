@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class ZookeeperConfig {
     private static final String connectString = "154.204.43.79:2180";
 
-    private static final int timeout = 4000;
+    private static final int timeout = 10000;
 
     @Bean(name = "zkClient")
     public ZooKeeper zkClient() {
