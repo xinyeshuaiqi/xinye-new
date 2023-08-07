@@ -9,6 +9,8 @@
     </parent>
 
     <artifactId>xinye-sdk</artifactId>
+    <packaging>jar</packaging>
+
 
     <dependencies>
 

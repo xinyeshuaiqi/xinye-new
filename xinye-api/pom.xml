@@ -9,6 +9,8 @@
     </parent>
 
     <artifactId>xinye-api</artifactId>
+    <packaging>war</packaging>
+
 
     <dependencies>
         <dependency>
