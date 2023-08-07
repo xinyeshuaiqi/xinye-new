@@ -10,10 +10,13 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author wangmingxin03
  * Created on 2021-12-16
  */
+@Slf4j
 public class SimpleKafkaProducer {
     private static final String SERVER_LIST = "39.97.47.254:9092,39.97.47.254:9093";
 
@@ -32,6 +35,6 @@ public class SimpleKafkaProducer {
         RecordMetadata recordMetadata = result.get();
         int partition = recordMetadata.partition();
         long offset = recordMetadata.offset();
-        // log.info("produce msg | partition:{}, offset:{}", partition, offset);
+        log.info("produce msg | partition:{}, offset:{}", partition, offset);
     }
 }

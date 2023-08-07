@@ -18,10 +18,13 @@ import org.apache.kafka.clients.consumer.OffsetAndMetadata;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author wangmingxin03
  * Created on 2021-12-17
  */
+@Slf4j
 public class SimpleKafkaConsumer2 {
     private static final String SERVER_LIST = "39.97.47.254:9092,39.97.47.254:9093";
 
@@ -76,7 +79,7 @@ public class SimpleKafkaConsumer2 {
                         ConsumerRecord<String, String> next = pIterator.next();
 
                         // handle msg
-                        // log.info("consume msg | key:{}, value:{}, partition:{}, offset:{}",next.key(), next.value(), next.partition(), next.offset());
+                        log.info("consume msg | key:{}, value:{}, partition:{}, offset:{}",next.key(), next.value(), next.partition(), next.offset());
                     }
 
                     // 提交分区最后一条数据

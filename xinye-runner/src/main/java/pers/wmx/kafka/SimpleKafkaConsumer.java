@@ -14,10 +14,13 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author wangmingxin03
  * Created on 2021-12-16
  */
+@Slf4j
 public class SimpleKafkaConsumer {
     private static final String SERVER_LIST = "39.97.47.254:9092,39.97.47.254:9093";
 
@@ -64,7 +67,7 @@ public class SimpleKafkaConsumer {
                 Iterator<ConsumerRecord<String, String>> iterator = records.iterator();
                 while(iterator.hasNext()) {
                     ConsumerRecord<String, String> record = iterator.next();
-                    // log.info("consume msg | key:{}, value:{}, partition:{}, offset:{}",record.key(), record.value(), record.partition(), record.offset());
+                    log.info("consume msg | key:{}, value:{}, partition:{}, offset:{}",record.key(), record.value(), record.partition(), record.offset());
                 }
             }
         }

@@ -7,10 +7,13 @@ import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * @author wangmingxin03
  * Created on 2021-12-15
  */
+@Slf4j
 @Service
 public class KafkaProducerHelper {
     private static final String TOPIC_NAME = "test-1";

@@ -5,11 +5,14 @@ import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSON;
 
+import lombok.extern.slf4j.Slf4j;
+
 
 /**
  * @author wangmingxin03
  * Created on 2021-12-16
  */
+@Slf4j
 @Service
 public class KafkaAConsumerHelper {
     private static final String TOPIC_NAME = "test-1";
@@ -18,6 +21,6 @@ public class KafkaAConsumerHelper {
     // 再起一个Consumer,2个Consumer会分配
     @KafkaListener(topics = TOPIC_NAME, groupId = "order-create")
     public void onMessage(OrderCreateMsg orderCreateMsg) {
-        // log.info("KafkaAConsumerHelper consume msg:{}", JSON.toJSONString(orderCreateMsg));
+        log.info("KafkaAConsumerHelper consume msg:{}", JSON.toJSONString(orderCreateMsg));
     }
 }
