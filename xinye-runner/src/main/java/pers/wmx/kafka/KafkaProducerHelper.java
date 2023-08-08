@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 public class KafkaProducerHelper {
-    private static final String TOPIC_NAME = "test-1";
+    private static final String TOPIC_NAME = "kafka-0807";
 
     @Resource
     private KafkaTemplate<Object, Object> kafkaTemplate;

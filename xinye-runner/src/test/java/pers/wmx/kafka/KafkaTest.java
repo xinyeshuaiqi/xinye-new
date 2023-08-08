@@ -15,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @SpringBootTest
+@RunWith(SpringRunner.class)
 public class KafkaTest {
     @Autowired
     private KafkaProducerHelper kafkaProducerHelper;
@@ -23,7 +24,8 @@ public class KafkaTest {
     public void testSend() throws Exception {
         OrderCreateMsg msg = new OrderCreateMsg(2, 234);
         SendResult sendResult = kafkaProducerHelper.send(msg);
-        log.info("sendResult:{}", sendResult);
+        log.info("sendResult:{}",
+                sendResult.getProducerRecord().toString());
     }
 
 }

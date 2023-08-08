@@ -22,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class SimpleKafkaConsumer {
-    private static final String SERVER_LIST = "39.97.47.254:9092,39.97.47.254:9093";
+    private static final String SERVER_LIST = "172.28.208.73:9092";
 
     private static final String TOPIC_NAME = "xinye";
 
