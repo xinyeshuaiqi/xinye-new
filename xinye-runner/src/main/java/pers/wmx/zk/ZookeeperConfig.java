@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class ZookeeperConfig {
-    private static final String connectString = "154.204.43.79:2180";
+    private static final String connectString = "172.28.208.73:2180";
 
     private static final int timeout = 10000;
 

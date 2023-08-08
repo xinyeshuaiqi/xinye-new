@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: 154.204.43.79:9092,154.204.43.79:9093
+    bootstrap-servers: 172.28.208.73:9092
     producer:
       acks: 1
       retries: 3
