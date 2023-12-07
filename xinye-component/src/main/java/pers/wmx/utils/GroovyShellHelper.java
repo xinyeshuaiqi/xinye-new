@@ -34,7 +34,12 @@ public class GroovyShellHelper {
         return script.run();
     }
 
-    public void startScript() throws IOException {
+    public static void testGroovy(){
+        GroovyShell groovyShell = new GroovyShell();
+        groovyShell.evaluate("println 'hello Groovy shell.'");
+    }
+
+    public void testGroovy2() throws IOException {
         // 注意这里创建 groovy.lang.Binding
         Binding binding = new Binding();
         // 设置 args 参数到 Binding 中的 variable 成员中
@@ -47,11 +52,7 @@ public class GroovyShellHelper {
     }
 
     public static void main(String[] args) {
-        try {
-            new GroovyShellHelper().startScript();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        testGroovy();
     }
 
 }
