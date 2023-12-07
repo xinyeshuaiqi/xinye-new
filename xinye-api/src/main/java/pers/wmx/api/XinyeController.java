@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import pers.wmx.aspect.ActionAspect;
 import pers.wmx.service.XinyeService;
+import pers.wmx.utils.XinyeSpringHelper;
 
 /**
  * @author wangmingxin03
@@ -18,6 +19,9 @@ import pers.wmx.service.XinyeService;
 public class XinyeController {
     @Autowired
     private XinyeService xinyeService;
+
+    @Autowired
+    private XinyeSpringHelper xinyeSpringHelper;
 
     @ActionAspect(value = "do aspect")
     @RequestMapping("/test")
@@ -36,5 +40,11 @@ public class XinyeController {
     public Map<String, Object> getRedis() {
         Map<String, Object> result = xinyeService.getRedis();
         return result;
+    }
+
+    @RequestMapping("/testSpring")
+    public Map<String, Object> testSpring() {
+        XinyeService bean = XinyeSpringHelper.getBean(XinyeService.class);
+        return bean.get();
     }
 }
