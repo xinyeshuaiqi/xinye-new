@@ -125,6 +125,24 @@
 			<artifactId>jol-core</artifactId>
 			<version>0.9</version>
 		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy-all</artifactId>
+			<version>3.0.13</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.kohsuke</groupId>
+			<artifactId>groovy-sandbox</artifactId>
+			<version>1.19</version>
+		</dependency>
 	</dependencies>
 
 	<build>
