@@ -36,14 +36,14 @@ public class GroovyShellHelper {
 
     public static void testGroovy(){
         GroovyShell groovyShell = new GroovyShell();
-        groovyShell.evaluate("println 'hello Groovy shell.'");
+        groovyShell.evaluate("printf 'a'");
     }
 
-    public void testGroovy2() throws IOException {
+    public static void testGroovy2() throws IOException {
         // 注意这里创建 groovy.lang.Binding
         Binding binding = new Binding();
         // 设置 args 参数到 Binding 中的 variable 成员中
-        binding.setVariable("args", new String[]{"arg0", "arg1"});
+        //binding.setVariable("args", new String[]{"arg0", "arg1"});
 
         // 执行 Groovy 脚本
         GroovyShell shell = new GroovyShell(GroovyShellHelper.class.getClassLoader(), binding);
@@ -51,8 +51,11 @@ public class GroovyShellHelper {
         shell.evaluate(file);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         testGroovy();
+
+        //testGroovy2();
+        //evaluate("def a = 10");
     }
 
 }

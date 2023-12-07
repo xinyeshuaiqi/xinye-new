@@ -1,2 +1,2 @@
-def range = 5
-
+def a = 5
+printf a
