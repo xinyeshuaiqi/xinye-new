@@ -42,12 +42,12 @@ public class GroovyShellHelper {
     public static void testGroovy2() throws IOException {
         Binding binding = new Binding();
         GroovyShell shell = new GroovyShell(GroovyShellHelper.class.getClassLoader(), binding);
-        File file = new File("xinye-component/src/main/java/pers/wmx/utils/test.groovy");
+        File file = new File("xinye-component/src/main/java/pers/wmx/utils/test2.groovy");
         shell.evaluate(file);
     }
 
     public static void main(String[] args) throws IOException {
-        testGroovy();
+        //testGroovy();
 
         testGroovy2();
         //、、、evaluate("def a = 10");
